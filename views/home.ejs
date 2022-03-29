@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Money</title>
+</head>
+<body>
+	<form action="/" id="homeForm" method="post">
+		<label for="pet-select">종류</label>
+		<select name="pets" id="pet-select">
+			<option value="" name="" selected>--종류를 선택해주세요--</option>
+			<option value="교회헌금" name="select1">교회헌금</option>
+			<option value="적금" name="select2">적금</option>
+		</select>
+		<div>
+			<input type="text" id="day" placeholder="날짜" name="day">
+			<label for="floatingInput">날짜</label>
+		</div>
+		<div>
+			<input type="text" id="name" placeholder="금액" name="money">
+			<label for="floatingInput">금액</label>
+		</div>
+		<button type="submit"  class="btn btn-dark">기록 하기!</button>
+	</form>
+
+	<div>
+		<% for(let i = 0; i < all_datas.length; i++){ %>
+			<h2><%- all_datas[i].pets %></h2>
+			<h4><%- all_datas[i].day %></h4>
+			<p><%- all_datas[i].money %></p>
+		<% } %> 
+	</div>
+		
+
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		
+</div>
+</body>
+</html>
